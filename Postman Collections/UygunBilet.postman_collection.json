@@ -1,0 +1,566 @@
+{
+	"info": {
+		"_postman_id": "74bbb6ee-4eff-48b7-ba6f-0083abade35f",
+		"name": "UygunBilet",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19630129"
+	},
+	"item": [
+		{
+			"name": "Trip",
+			"item": [
+				{
+					"name": "http://localhost:9090/trips",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/trips",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"trips"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9090/trips",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": 1,\r\n    \"no\": 131,\r\n    \"type\": \"FLIGHT\",\r\n    \"departure\": \"İstanbul\",\r\n    \"destination\": \"Ankara\",\r\n    \"departureDate\": \"2023-02-02\",\r\n    \"departureTime\": \"20:30:00\",\r\n    \"travelAgency\": \"Pegasus\",\r\n    \"ticketPrice\": 1320.0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/trips",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"trips"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9090/trips/2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/trips/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"trips",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9090/trips/2?userId=1",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/trips/2?userId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"trips",
+								"2"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9090/trips/dates/2023-02-02",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/trips/dates/2023-02-02",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"trips",
+								"dates",
+								"2023-02-02"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9090/trips/types/bus",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/trips/types/bus",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"trips",
+								"types",
+								"bus"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9090/trips/departures/İstanbul/destinations/Ankara",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/trips/departures/İstanbul/destinations/Ankara",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"trips",
+								"departures",
+								"İstanbul",
+								"destinations",
+								"Ankara"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9090/trips/services?departure=İstanbul&destination=Ankara&type=BUS&date=2023-02-02",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/trips/services?departure=İstanbul&destination=Ankara&type=BUS&date=2023-02-02",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"trips",
+								"services"
+							],
+							"query": [
+								{
+									"key": "departure",
+									"value": "İstanbul"
+								},
+								{
+									"key": "destination",
+									"value": "Ankara"
+								},
+								{
+									"key": "type",
+									"value": "BUS"
+								},
+								{
+									"key": "date",
+									"value": "2023-02-02"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "http://localhost:9090/users",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"admin\",\r\n    \"email\": \"admin@gmail.com\",\r\n    \"password\": \"Dev-admin123\",\r\n    \"phone\" : \"5552223321\",\r\n    \"type\": \"CORPORATE\",\r\n    \"gender\": \"MALE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9090/users/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"far@gmail.com\",\r\n    \"password\": \"Dev-far123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9090/users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9090/users/tickets?userId=1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/users/tickets?userId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"users",
+								"tickets"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Seat",
+			"item": [
+				{
+					"name": "http://localhost:9090/seats",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/seats",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"seats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9090/seats",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"seatNo\": 2,\r\n    \"type\": \"SINGLE\",\r\n    \"tripId\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/seats",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"seats"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ticket",
+			"item": [
+				{
+					"name": "http://localhost:9090/tickets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/tickets",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"tickets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9090/tickets",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\":\"TRANSFER\",\r\n    \"transferRequest\": {\r\n        \"accountNumberFrom\": \"1111 1111 1111 11\",\r\n        \"accountNumberTo\": \"2222 2222 2222 22\",\r\n        \"firmName\": \"uygunbilet\"\r\n    },\r\n    \"userId\": 1,\r\n    \"tripId\": 2,\r\n    \"seats\": [\r\n        {\r\n            \"firstName\": \"cem\",\r\n            \"lastName\": \"dirman\",\r\n            \"gender\": \"MALE\",\r\n            \"identityNo\": 10230511899,\r\n            \"seatId\": 4,\r\n            \"seatNo\": 1\r\n\r\n        },\r\n        {\r\n            \"firstName\": \"pelin\",\r\n            \"lastName\": \"yılmaz\",\r\n            \"gender\": \"FEMALE\",\r\n            \"identityNo\": 10230511899,\r\n            \"seatId\": 5,\r\n            \"seatNo\": 2\r\n        }\r\n\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/tickets",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"tickets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9090/tickets",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"CARD\",\r\n    \"cardRequest\": {\r\n        \"cardNo\": \"1111 1111 1111 11\",\r\n        \"expireDate\": \"2030-10-10\",\r\n        \"cvcNo\": 111\r\n    },\r\n    \"userId\": 1,\r\n    \"tripId\": 193,\r\n    \"seats\": [\r\n        {\r\n            \"firstName\": \"ahmet\",\r\n            \"lastName\": \"aydın\",\r\n            \"gender\": \"MALE\",\r\n            \"identityNo\": 10230511899,\r\n            \"seatId\": 200,\r\n            \"seatNo\": 144\r\n        }\r\n\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/tickets",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"tickets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9090/tickets/users/1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/tickets/users/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"tickets",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9090/tickets/sold/trips/2?userId=1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/tickets/sold/trips/2?userId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"tickets",
+								"sold",
+								"trips",
+								"2"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9090/tickets/sold/total/trips/2?userId=1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/tickets/sold/total/trips/2?userId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"tickets",
+								"sold",
+								"total",
+								"trips",
+								"2"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9090/tickets/sold/totalPrice/trips/2?userId=1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/tickets/sold/totalPrice/trips/2?userId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"tickets",
+								"sold",
+								"totalPrice",
+								"trips",
+								"2"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

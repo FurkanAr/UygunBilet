@@ -1,0 +1,29 @@
+{
+	"info": {
+		"_postman_id": "733468d7-99e1-4899-bcd5-45aca62807eb",
+		"name": "UygunBilet Payment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19630129"
+	},
+	"item": [
+		{
+			"name": "http://localhost:9090/payments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/payments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"payments"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
