@@ -5,25 +5,34 @@ Proje Konusu:
 Online uçak ve otobüs bileti satışı yapılmak istenmektedir. Uygulamanın gereksinimleri 
 aşağıdaki gibidir.
 
-Gereksinimler 
+Gereksinimler :
+
 • Kullanıcılar sisteme kayıt ve login olabilmelidir.
+
 • Kullanıcı kayıt işleminden sonra mail gönderilmelidir.
+
 • Kullanıcı şifresi istediğiniz bir hashing algoritmasıyla database kaydedilmelidir.
-• Admin kullanıcı yeni sefer ekleyebilir, iptal edebilir, toplam bilet satışını, bu satıştan 
-elde edilen toplam ücreti görebilir.
+
+• Admin kullanıcı yeni sefer ekleyebilir, iptal edebilir, toplam bilet satışını, bu satıştan elde edilen toplam ücreti görebilir.
+
 • Kullanıcılar şehir bilgisi, taşıt türü(uçak & otobüs) veya tarih bilgisi ile tüm seferleri 
 arayabilmelidir.
+
 • Bireysel kullanıcı aynı sefer için en fazla 5 bilet alabilir.
+
 • Bireysel kullanıcı tek bir siparişte en fazla 2 erkek yolcu için bilet alabilir.
+
 • Kurumsal kullanıcı aynı sefer için en fazla 20 bilet alabilir.
-• Satın alma işlemi başarılı ise işlem tamamlanmalı ve asenkron olarak bilet detayları 
-kullanıcının telefona numarasına sms gönderilmeli.
-• SMS, mail ve push Notification gönderme işlemleri için sadece Database kayıt etme 
-işlemi yapılması yeterlidir. Fakat bu işlemler tek bir Servis(uygulama) üzerinden ve 
-polimorfik davranış ile yapılmalıdır. 
+
+• Satın alma işlemi başarılı ise işlem tamamlanmalı ve asenkron olarak bilet detayları  kullanıcının telefona numarasına sms gönderilmeli.
+
+• SMS, mail ve push Notification gönderme işlemleri için sadece Database kayıt etme  işlemi yapılması yeterlidir. Fakat bu işlemler tek bir Servis(uygulama) üzerinden
+ve  polimorfik davranış ile yapılmalıdır. 
+
 • Kullancılar aldığı biletleri görebilmelidir. 
 
-Sistem Kabulleri 
+Sistem Kabulleri :
+
 Kullanıcılar bireysel ve kurumsal olabilir.
 SMS, Mail ve Push Notification gönderim işlemleri Asenkron olmalıdır.
 Uçak yolcu kapasitesi: 189
@@ -60,7 +69,7 @@ Uçakta 189, Otobüste ise 45 koltuk vardır. Koltuk tipleri ise tekli veya çif
 Koltuklardaki müşterilerin isim, soyisim, cinsiyet, tc kimlik numaraları veritabanında görüntülenebilmektedir. Kullanıcılara ise sadece koltuğun dolu veya boş olduğu bilgisi döndürülür.
 
 Kullanıcılar seferleri bulundukları şehirden gidecekleri şehre göre arayabilmektedir.
-KUllanıcılar seferleri sefer gününe göre arayabilmektedir.
+Kullanıcılar seferleri sefer gününe göre arayabilmektedir.
 Kullanıcılar seferleri otobüs veya uçak olarak arayabilmektedir.
 Kullanıcılar seferleri gidecekleri şehirden gidecekleri şehre, sefer gününe ve sefer türü(uçak, otobüs) olarak arayabilmektedirler.
 
@@ -90,16 +99,5 @@ Bu servislerin çalışması için gerekli olan api "get/post/delete" isteklerin
 "UygunBilet" servisi ve "UygunBilet-Payment" servislerinin Service katmanlarında unit test yazılmamıştır.
 
 Loglama ve Exception Handling mekanizmaları kurulmuştur. Servislerin loglama faaliyetleri ayrıca dosya olarak ana klasörlerindeki dizine kaydedilmektedir. 
-
-
-
-
-
-
-
-
-
-
-
 
 
