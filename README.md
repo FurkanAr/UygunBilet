@@ -40,17 +40,26 @@ Otobüs yolcu kapasitesi: 45
 Ödeme şekli sadece Kredi kartı ve Havale / EFT olabilir.
 Ödeme Servisi işlemleri Senkron olmalıdır.
 
-Kullanılan Teknolojiler; 
+Kullanılan Teknolojiler:
+
 • Java 17
+
 • JUnit
+
 • RESTful
+
 • Spring Boot
+
 • Docker 
+
 • PostgreSQL 
+
 • RabbbitMQ 
+
 • Postman
 
 Sistem İşleyişi:
+
 Sistem bütün çağrıların tek bir yerden yönlendirildiği api gateway üzerinden çalışmakta. Ayrıca derslerde ölçekleme amacıyla kullandığımız loadbalancer sayesinde sistemde yaşanan yoğunluklarda uygunbilet-service den bir kaç tane daha yaratarak servislerin hizmet alanını genişletmiştik.
 
 İlk olarak kullanıcıdan kayıt bilgisi istenmektedir, bu sayede kullanıcı uçak veya otobüs bileti alabilmektedir ve aldıkları biletleri görebilirler. 
